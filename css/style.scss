@@ -74,10 +74,25 @@ li {
 }
 
 #wrapper {
+  padding: 0 65px;
   & .content {
     margin-top: 93px;
     width: 500px;
     height: 1000px;
     background-color: #f4f4f4;
+  }
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  & img {
+    width: 250px;
+    margin-top: 50px;
+    margin-left: 9px;
+  }
+  & small {
+    margin-bottom: 10px;
   }
 }
