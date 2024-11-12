@@ -50,21 +50,27 @@ li {
           position: relative;
           z-index: 1;
 
+          &::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 15px;
+            background-color: #005344;
+            padding: 6px;
+            border-radius: 8px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+
           &:hover {
             color: #fff;
 
             &::before {
-              position: absolute;
-              content: '';
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 100%;
-              height: 15px;
-              background-color: #202f55;
-              padding: 6px;
-              border-radius: 8px;
-              z-index: -1;
+              opacity: 1;
             }
           }
         }
@@ -74,12 +80,62 @@ li {
 }
 
 #wrapper {
-  padding: 0 65px;
   & .content {
-    margin-top: 93px;
-    width: 500px;
-    height: 1000px;
-    background-color: #f4f4f4;
+    & .fv {
+      margin-top: 93px;
+      width: 100vw;
+      height: calc(100vh - 93px);
+      background-color: #00534417;
+      margin-bottom: 80px;
+    }
+    &_padding {
+      padding: 0 65px;
+    }
+
+    &_title {
+      font-size: 28px;
+      font-weight: 400;
+      margin-left: -2px;
+      margin-bottom: 24px;
+      &_en {
+        margin-top: 48px;
+        font-size: 14px;
+        // font-weight: 700;
+        margin-bottom: -5px;
+      }
+    }
+    & .about {
+      & .imgsmpl {
+        width: 100%;
+        height: 400px;
+        background-color: #005344;
+      }
+      &_text {
+        margin-top: 24px;
+      }
+    }
+    & .access {
+      &_text {
+        margin-bottom: 10px;
+      }
+      & .tel {
+        color: #005344;
+        text-decoration: underline;
+      }
+    }
+    & .p_text {
+      font-size: 16px;
+    }
+  }
+  .map {
+    margin-top: 48px;
+    &--gray {
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
   }
 }
 
@@ -89,8 +145,7 @@ li {
   flex-direction: column;
   & img {
     width: 250px;
-    margin-top: 50px;
-    margin-left: 9px;
+    margin: 50px 0 30px 9px;
   }
   & small {
     margin-bottom: 10px;
