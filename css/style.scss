@@ -4,6 +4,10 @@
   color: #2e2e2e;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -82,11 +86,15 @@ li {
 #wrapper {
   & .content {
     & .fv {
-      margin-top: 93px;
-      width: 100vw;
-      height: calc(100vh - 93px);
-      background-color: #00534417;
-      margin-bottom: 80px;
+      & img {
+        margin-top: 93px;
+        width: 100%;
+        height: calc(100vh - 93px);
+        object-fit: cover;
+        object-position: bottom;
+        display: block;
+        margin-bottom: 80px;
+      }
     }
     &_padding {
       padding: 0 65px;
@@ -107,11 +115,27 @@ li {
     & .about {
       & .imgsmpl {
         width: 100%;
-        height: 400px;
+        height: 450px;
         background-color: #005344;
       }
       &_text {
         margin-top: 24px;
+      }
+    }
+    & .facility {
+      & .floor {
+        display: flex;
+        &-1 {
+          margin-right: 5px;
+          cursor: pointer;
+        }
+        &-2 {
+          margin-left: 5px;
+          cursor: pointer;
+        }
+        & .slach {
+          cursor: default;
+        }
       }
     }
     & .access {
