@@ -36,6 +36,9 @@
                 <a href="#facility" class="header_nav_list_item">館内設備</a>
               </li>
               <li>
+                <a href="#faq" class="header_nav_list_item">よくあるご質問</a>
+              </li>
+              <li>
                 <a href="#access" class="header_nav_list_item">アクセス</a>
               </li>
             </ul>
@@ -86,13 +89,151 @@
                 <p>館内設備</p>
               </div>
             </div>
-            <div class="f-swicth">
+            <div class="f-switch">
               <div class="floor">
                 <p class="floor-1">1階</p>
-                <p class="slach">/</p>
+                <p class="slash">/</p>
                 <p class="floor-2">2階</p>
               </div>
             </div>
+            <div class="f-facility f-facility-1">
+              <div class="f-facility-items">
+                <div
+                  class="item"
+                  data-id="1"
+                  data-description="暖簾をくぐり玄関に入ったら、お履きのものを脱いで靴箱に入れ、靴箱の鍵はフロントにお預けください。傘や杖などは鍵付きの傘立てをお使いください。
+                "
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image.png"
+                    alt="玄関"
+                  />
+                  <p class="item-title">玄関</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="2"
+                  data-description="こちらの券売機にて入浴券をお買い求めください。電子マネーやクレジットカードをご利用の際はフロントスタッフにお伝えください。"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image.png"
+                    alt="券売機"
+                  />
+                  <p class="item-title">券売機</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="3"
+                  data-description="フロントで券と靴箱の鍵をスタッフに渡し、脱衣所のロッカーの鍵を受け取りください。お帰りの際はこちらでロッカーの鍵を返却してください。フロントではロッカーに入らないような大きなお荷物もお預かりいたします。何か気になることなどがございましたらフロントスタッフになんでもお申し付けください！"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image.png"
+                    alt="フロント"
+                  />
+                  <p class="item-title">フロント</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="4"
+                  data-description="休憩所です。新聞や雑誌など置いてあります。待ち合わせの際などゆったりとお座りになってください。"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image.png"
+                    alt="休憩所"
+                  />
+                  <p class="item-title">休憩所</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="5"
+                  data-description="脱衣所です。化粧水やクレンジング、ドライヤーなど設置しております。自動販売機も設置してあります。定期的にスタッフが見回りをし、清潔な状態を保てるようにしています。"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image.png"
+                    alt="脱衣所"
+                  />
+                  <p class="item-title">脱衣所</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="6"
+                  data-description="浴場です。通常の湯に加えジャグジー、日替わりの薬湯などございます。リンスインシャンプーとボディソープを設置しておりますため、ご自由にお使いください。浴場内も定期的にスタッフが見回りにきてお客様が安心してご利用になられるように努めています。"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image.png"
+                    alt="浴場"
+                  />
+                  <p class="item-title">浴場</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="7"
+                  data-description="露天風呂です。外気を浴びて、ゆっくりとお過ごしになれます。"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image.png"
+                    alt="露天風呂"
+                  />
+                  <p class="item-title">露天風呂</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="8"
+                  data-description="サウナの温度は約90度、水風呂は約15度です。1階のサウナには遠赤外線形のガスストーブを設置しております。2階のサウナには数分に一度のオートロウリュが付いています。"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image.png"
+                    alt="サウナ"
+                  />
+                  <p class="item-title">サウナ</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="9"
+                  data-description="洗濯機7台と乾燥機6台が設置してあります。洗濯は200円、乾燥は10分につき100円です。洗剤や漂白剤などの販売機も設置しております。"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image.png"
+                    alt="コインランドリー"
+                  />
+                  <p class="item-title">コインランドリー</p>
+                </div>
+              </div>
+            </div>
+            <!-- facility: popup -->
+            <div id="popup" class="popup">
+              <div class="popup-content">
+                <span class="close">×</span>
+                <div class="popup-img">
+                  <img id="popup-img" src="" alt="Popup Image" />
+                  <div class="popup-description">
+                    <p id="popup-title"></p>
+                    <p id="popup-text" class="popup-text"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- よくあるご質問 -->
+          <div class="faq" id="faq">
+            <div class="ttl">
+              <div class="content_title_en">
+                <p>FAQ</p>
+              </div>
+              <div class="content_title">
+                <p>よくあるご質問</p>
+              </div>
+            </div>
+            <p class="about_text p_text"></p>
           </div>
           <!-- access -->
           <div class="access" id="access">
