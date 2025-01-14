@@ -1,20 +1,21 @@
-// ページスクロール調整
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+  // ページスクロール調整
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
 
-    const targetId = this.getAttribute('href');
-    const targetElement = document.querySelector(targetId);
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
 
-    window.scrollTo({
-      top: targetElement.offsetTop - 110,
-      behavior: 'smooth',
+      window.scrollTo({
+        top: targetElement.offsetTop - 110,
+        behavior: 'smooth',
+      });
     });
   });
-});
 
-// facilityの画像クリック時
-document.addEventListener('DOMContentLoaded', () => {
+  // popup時
+  // facilityの画像クリック時
   const items = document.querySelectorAll('.item');
   const popup = document.getElementById('popup');
   const popupImg = document.getElementById('popup-img');
@@ -57,6 +58,83 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // スクロールを元に戻す
       document.body.style.overflow = '';
+    }
+  });
+
+  // フロア切り替え
+  const floor1Button = document.querySelector('.floor-1');
+  const floor2Button = document.querySelector('.floor-2');
+  const facility1 = document.querySelector('.f-facility-1');
+  const facility2 = document.querySelector('.f-facility-2');
+
+  // デフォルトで1階を表示
+  facility1.style.display = 'block';
+  facility1.classList.add('visible');
+  floor1Button.classList.add('active');
+
+  const showFacility = (toShow, toHide) => {
+    toHide.classList.remove('visible');
+    toHide.style.display = 'none';
+    toShow.style.display = 'block';
+    setTimeout(() => toShow.classList.add('visible'), 50);
+  };
+
+  floor1Button.addEventListener('click', () => {
+    if (!facility1.classList.contains('visible')) {
+      showFacility(facility1, facility2);
+      floor1Button.classList.add('active');
+      floor2Button.classList.remove('active');
+    }
+  });
+
+  floor2Button.addEventListener('click', () => {
+    if (!facility2.classList.contains('visible')) {
+      showFacility(facility2, facility1);
+      floor2Button.classList.add('active');
+      floor1Button.classList.remove('active');
+    }
+  });
+
+  // スクロールアニメーション
+  const scrollElements = document.querySelectorAll('.scroll-animation');
+
+  const elementInView = (el, offset = 100) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return (
+      elementTop <=
+      (window.innerHeight || document.documentElement.clientHeight) - offset
+    );
+  };
+
+  const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+      if (elementInView(el, 100)) {
+        el.classList.add('visible');
+      } else {
+        el.classList.remove('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', handleScrollAnimation);
+  handleScrollAnimation();
+
+  // ハンバーガーメニュー
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  hamburger.addEventListener('click', (event) => {
+    event.stopPropagation();
+    menu.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (
+      menu.classList.contains('active') &&
+      !menu.contains(event.target) &&
+      !hamburger.contains(event.target)
+    ) {
+      menu.classList.remove('active');
     }
   });
 });
