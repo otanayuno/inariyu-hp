@@ -156,9 +156,10 @@ li {
 #wrapper .content .info_wrapper_item_content_fee {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
 }
 #wrapper .content .info_wrapper_item_content_txt_L {
-  font-size: 24px;
+  font-size: 28px;
 }
 #wrapper .content .info_wrapper_item_content_txt_M {
   font-size: 16px;
@@ -175,6 +176,9 @@ li {
 }
 #wrapper .content .info_wrapper_item_content_towels_flex_end {
   justify-content: flex-end;
+}
+#wrapper .content .info_wrapper_item_content_sauna {
+  margin-top: 20px;
 }
 #wrapper .content .facility .f-switch {
   text-align: start;
@@ -368,6 +372,10 @@ li {
 }
 #footer small {
   margin-bottom: 10px;
+}
+
+.fee_margin {
+  margin-top: -3px;
 }
 
 /* ハンバーガーボタン */
