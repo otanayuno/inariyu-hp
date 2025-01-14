@@ -334,6 +334,7 @@ li {
   height: 80%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 #wrapper .popup-content img {
   max-width: calc(100% - 30px);
