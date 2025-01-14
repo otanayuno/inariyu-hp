@@ -17,11 +17,13 @@
                   src="images/inariyu-logo.jpg"
                   alt="稲荷湯"
                   class="header_logo_images_logo"
+                  loading="lazy"
                 />
                 <img
                   src="images/inariyu-text.jpg"
                   alt="稲荷湯"
                   class="header_logo_images_text"
+                  loading="lazy"
                 />
               </a>
             </div>
@@ -29,22 +31,66 @@
           <div class="header_nav">
             <ul class="header_nav_list">
               <li>
-                <a href="#about" class="header_nav_list_item">稲荷湯について</a>
-              </li>
-              <li><a href="#info" class="header_nav_list_item">施設情報</a></li>
-              <li>
-                <a href="#facility" class="header_nav_list_item">館内設備</a>
+                <a href="#about" class="header_nav_list_item nav-link"
+                  >稲荷湯について</a
+                >
               </li>
               <li>
-                <a href="#faq" class="header_nav_list_item">よくあるご質問</a>
+                <a href="#info" class="header_nav_list_item nav-link"
+                  >施設情報</a
+                >
               </li>
               <li>
-                <a href="#access" class="header_nav_list_item">アクセス</a>
+                <a href="#facility" class="header_nav_list_item nav-link"
+                  >館内設備</a
+                >
+              </li>
+              <li>
+                <a href="#faq" class="header_nav_list_item nav-link"
+                  >よくあるご質問</a
+                >
+              </li>
+              <li>
+                <a href="#access" class="header_nav_list_item nav-link"
+                  >アクセス</a
+                >
               </li>
             </ul>
           </div>
         </div>
       </div>
+      <nav>
+        <!-- ハンバーガーボタン -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- メニュー -->
+        <ul class="menu" id="menu">
+          <li>
+            <a href="#about" class="header_nav_list_item nav-link"
+              >稲荷湯について</a
+            >
+          </li>
+          <li>
+            <a href="#info" class="header_nav_list_item nav-link">施設情報</a>
+          </li>
+          <li>
+            <a href="#facility" class="header_nav_list_item nav-link"
+              >館内設備</a
+            >
+          </li>
+          <li>
+            <a href="#faq" class="header_nav_list_item nav-link"
+              >よくあるご質問</a
+            >
+          </li>
+          <li>
+            <a href="#access" class="header_nav_list_item nav-link">アクセス</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <div id="wrapper">
       <div class="content">
@@ -53,7 +99,7 @@
         </div>
         <div class="content_padding">
           <!-- about -->
-          <div class="about" id="about">
+          <div class="about scroll-animation scroll-section" id="about">
             <div class="ttl">
               <div class="content_title_en">
                 <p>About</p>
@@ -69,7 +115,7 @@
             </p>
           </div>
           <!-- infomation -->
-          <div class="info" id="info">
+          <div class="info scroll-animation" id="info">
             <div class="ttl">
               <div class="content_title_en">
                 <p>Infomation</p>
@@ -78,9 +124,116 @@
                 <p>施設情報</p>
               </div>
             </div>
+            <div class="info_wrapper">
+              <div class="info_wrapper_item">
+                <div class="info_wrapper_item_ttl">営業時間</div>
+                <div class="info_wrapper_item_content">
+                  <p class="info_wrapper_item_content_txt_L">
+                    14:00 - 23:00
+                    <span class="info_wrapper_item_content_txt_S"></span>
+                  </p>
+                  <p class="info_wrapper_item_content_txt_M">
+                    最終受付22:30、水曜定休
+                  </p>
+                </div>
+              </div>
+              <div class="info_wrapper_item">
+                <div class="info_wrapper_item_ttl">入浴料金</div>
+                <div class="info_wrapper_item_content">
+                  <div class="info_wrapper_item_content_fee">
+                    <div class="info_wrapper_item_content_fee_wrapper">
+                      <p class="info_wrapper_item_content_txt_S">大人</p>
+                      <p class="info_wrapper_item_content_txt_L">550円</p>
+                    </div>
+                    <div class="info_wrapper_item_content_fee_wrapper">
+                      <p class="info_wrapper_item_content_txt_S">
+                        中人（小学生）
+                      </p>
+                      <p class="info_wrapper_item_content_txt_L">200円</p>
+                    </div>
+                    <div class="info_wrapper_item_content_fee_wrapper">
+                      <p class="info_wrapper_item_content_txt_S">
+                        小人（0-5歳）
+                      </p>
+                      <p class="info_wrapper_item_content_txt_L">100円</p>
+                    </div>
+                    <div class="info_wrapper_item_content_fee_wrapper">
+                      <p
+                        class="info_wrapper_item_content_txt_S"
+                        style="padding-top: 20px"
+                      >
+                        共通入浴券（10枚）
+                      </p>
+                      <p class="info_wrapper_item_content_txt_L">5000円</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="info_wrapper_item">
+                <div class="info_wrapper_item_ttl">サービス</div>
+                <div class="info_wrapper_item_content">
+                  <div class="info_wrapper_item_content_towels">
+                    <div class="info_wrapper_item_content_towels_flex">
+                      <div class="info_wrapper_item_content_txt_M">
+                        貸出タオル
+                      </div>
+                      <div class="info_wrapper_item_content_txt_M">小100円</div>
+                    </div>
+                    <div
+                      class="info_wrapper_item_content_towels_flex info_wrapper_item_content_towels_flex_end"
+                    >
+                      <div
+                        class="info_wrapper_item_content_txt_M padding_bottom"
+                      >
+                        大200円
+                      </div>
+                    </div>
+                    <div class="info_wrapper_item_content_towels_flex">
+                      <div class="info_wrapper_item_content_txt_M">
+                        名入りタオル
+                      </div>
+                      <div
+                        class="info_wrapper_item_content_txt_M padding_bottom"
+                      >
+                        小300円
+                      </div>
+                    </div>
+                    <div class="info_wrapper_item_content_towels_flex">
+                      <div class="info_wrapper_item_content_txt_M">
+                        シャンプー、コンディショナー、ボディソープ
+                      </div>
+                      <div
+                        class="info_wrapper_item_content_txt_M padding_bottom"
+                      >
+                        各100円
+                      </div>
+                    </div>
+                    <div class="info_wrapper_item_content_towels_flex">
+                      <div class="info_wrapper_item_content_txt_M">
+                        化粧水、乳液、洗顔
+                      </div>
+                      <div class="info_wrapper_item_content_txt_M">
+                        各50-80円
+                      </div>
+                    </div>
+                    <p class="info_wrapper_item_content_txt_S">
+                      ※浴場内にリンスインシャンプーとボディソープをご用意しております。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="info_wrapper_item">
+                <div class="info_wrapper_item_ttl">その他設備</div>
+                <div class="info_wrapper_item_content">
+                  <p class="info_wrapper_item_content_txt_M">
+                    ドライヤー5分10円、15分50円
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- facility -->
-          <div class="facility" id="facility">
+          <div class="facility scroll-animation scroll-section" id="facility">
             <div class="ttl">
               <div class="content_title_en">
                 <p>Facility</p>
@@ -91,90 +244,169 @@
             </div>
             <div class="f-switch">
               <div class="floor">
-                <p class="floor-1">1階</p>
-                <p class="slash">/</p>
-                <p class="floor-2">2階</p>
+                <button class="floor-1">1階</button>
+                <span class="slash">/</span>
+                <button class="floor-2">2階</button>
               </div>
             </div>
+            <!-- 1F -->
             <div class="f-facility f-facility-1">
               <div class="f-facility-items">
                 <div
                   class="item"
                   data-id="1"
-                  data-description="暖簾をくぐり玄関に入ったら、お履きのものを脱いで靴箱に入れ、靴箱の鍵はフロントにお預けください。傘や杖などは鍵付きの傘立てをお使いください。
+                  data-description="暖簾をくぐり、玄関にお入りいただいたら、お履き物を脱いで靴箱にお入れください。靴箱の鍵は必ずフロントへお預けください。また、傘や杖などは鍵付きの傘立てをご利用ください。
                 "
                 >
                   <img
                     class="item-img"
                     src="images/sample-image1.JPG"
                     alt="玄関"
+                    loading="lazy"
                   />
                   <p class="item-title">玄関</p>
                 </div>
                 <div
                   class="item"
                   data-id="2"
-                  data-description="こちらの券売機にて入浴券をお買い求めください。電子マネーやクレジットカードをご利用の際はフロントスタッフにお伝えください。"
+                  data-description="こちらの券売機で入浴券をご購入ください。電子マネーやクレジットカードでのお支払いをご希望の場合は、フロントスタッフまでお声がけください。"
                 >
                   <img
                     class="item-img"
                     src="images/sample-image1.JPG"
                     alt="券売機"
+                    loading="lazy"
                   />
                   <p class="item-title">券売機</p>
                 </div>
                 <div
                   class="item"
                   data-id="3"
-                  data-description="フロントで券と靴箱の鍵をスタッフに渡し、脱衣所のロッカーの鍵を受け取りください。お帰りの際はこちらでロッカーの鍵を返却してください。フロントではロッカーに入らないような大きなお荷物もお預かりいたします。何か気になることなどがございましたらフロントスタッフになんでもお申し付けください！"
+                  data-description="フロントで入浴券と靴箱の鍵をスタッフにお渡しいただき、脱衣所ロッカーの鍵をお受け取りください。お帰りの際は、ロッカーの鍵をこちらにご返却ください。また、ロッカーに入らない大きなお荷物もフロントでお預かりいたします。気になる点やご要望がございましたら、どうぞお気軽にフロントスタッフにお声がけください！"
                 >
                   <img
                     class="item-img"
                     src="images/sample-image1.JPG"
                     alt="フロント"
+                    loading="lazy"
                   />
                   <p class="item-title">フロント</p>
                 </div>
                 <div
                   class="item"
                   data-id="4"
-                  data-description="休憩所です。新聞や雑誌など置いてあります。待ち合わせの際などゆったりとお座りになってください。"
+                  data-description="こちらは休憩所です。新聞や雑誌などをご用意しておりますので、待ち合わせの際などにごゆっくりおくつろぎください。"
                 >
                   <img
                     class="item-img"
                     src="images/sample-image1.JPG"
                     alt="休憩所"
+                    loading="lazy"
                   />
                   <p class="item-title">休憩所</p>
                 </div>
                 <div
                   class="item"
                   data-id="5"
-                  data-description="脱衣所です。化粧水やクレンジング、ドライヤーなど設置しております。自動販売機も設置してあります。定期的にスタッフが見回りをし、清潔な状態を保てるようにしています。"
+                  data-description="こちらは脱衣所です。化粧水やクレンジング、ドライヤーなどをご利用いただけます。また、自動販売機も設置しております。スタッフが定期的に見回りを行い、清潔な環境を保つよう努めています。"
                 >
                   <img
                     class="item-img"
                     src="images/sample-image1.JPG"
                     alt="脱衣所"
+                    loading="lazy"
                   />
                   <p class="item-title">脱衣所</p>
                 </div>
                 <div
                   class="item"
                   data-id="6"
-                  data-description="浴場です。通常の湯に加えジャグジー、日替わりの薬湯などございます。リンスインシャンプーとボディソープを設置しておりますため、ご自由にお使いください。浴場内も定期的にスタッフが見回りにきてお客様が安心してご利用になられるように努めています。"
+                  data-description="こちらは大浴場です。通常のお湯に加え、ジャグジーや日替わりの薬湯をご用意しております。リンスインシャンプーとボディソープも設置しておりますので、ご自由にお使いください。浴場内は定期的にスタッフが見回りを行い、お客様が安心して快適にご利用いただけるよう努めています。"
                 >
                   <img
                     class="item-img"
                     src="images/sample-image1.JPG"
                     alt="浴場"
+                    loading="lazy"
+                  />
+                  <p class="item-title">大浴場</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="7"
+                  data-description="こちらは露天風呂です。吹き抜けの設計で開放感たっぷりの空間となっております。ゆったりとしたひとときをお楽しみください。"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image1.JPG"
+                    alt="露天風呂"
+                    loading="lazy"
+                  />
+                  <p class="item-title">露天風呂</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="8"
+                  data-description="サウナの温度は約90度、水風呂は約15度に設定されています。遠赤外線式のガスストーブを設置しており、効率的に温まっていただけます。"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image1.JPG"
+                    alt="サウナ"
+                    loading="lazy"
+                  />
+                  <p class="item-title">サウナ</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="9"
+                  data-description="こちらのコインランドリーには、洗濯機7台と乾燥機6台が設置されています。洗濯は200円、乾燥は10分ごとに100円となっております。また、洗剤や漂白剤などの販売機もご利用いただけます。店舗内外どちらからでも出入り可能ですので、ご自由にご利用ください。"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image1.JPG"
+                    alt="コインランドリー"
+                    loading="lazy"
+                  />
+                  <p class="item-title">コインランドリー</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2F -->
+            <div class="f-facility f-facility-2">
+              <div class="f-facility-items">
+                <div
+                  class="item"
+                  data-id="10"
+                  data-description="こちらは脱衣所です。化粧水やクレンジング、ドライヤーなどをご利用いただけます。また、自動販売機も設置しております。スタッフが定期的に見回りを行い、清潔な環境を保つよう努めています。
+                "
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image1.JPG"
+                    alt="脱衣所"
+                    loading="lazy"
+                  />
+                  <p class="item-title">脱衣所</p>
+                </div>
+                <div
+                  class="item"
+                  data-id="11"
+                  data-description="こちらは大浴場です。通常のお湯に加え、ジャグジーや日替わりの薬湯をご用意しております。リンスインシャンプーとボディソープも設置しておりますので、ご自由にお使いください。浴場内は定期的にスタッフが見回りを行い、お客様が安心して快適にご利用いただけるよう努めています。"
+                >
+                  <img
+                    class="item-img"
+                    src="images/sample-image1.JPG"
+                    alt="浴場"
+                    loading="lazy"
                   />
                   <p class="item-title">浴場</p>
                 </div>
                 <div
                   class="item"
-                  data-id="7"
-                  data-description="露天風呂です。吹き抜けになっているため開放感があり、ゆったりとしたお時間をお過ごしになれます。"
+                  data-id="12"
+                  data-description="こちらは露天風呂です。吹き抜けの設計で開放感たっぷりの空間となっております。ゆったりとしたひとときをお楽しみください。"
                 >
                   <img
                     class="item-img"
@@ -185,46 +417,40 @@
                 </div>
                 <div
                   class="item"
-                  data-id="8"
-                  data-description="サウナの温度は約90度、水風呂は約15度です。1階のサウナには遠赤外線形のガスストーブを設置しております。2階のサウナには数分に一度のオートロウリュが付いています。"
+                  data-id="13"
+                  data-description="サウナの温度は約90度、水風呂は約15度に設定されています。数分に一度のオートロウリュが付いています。"
                 >
                   <img
                     class="item-img"
                     src="images/sample-image1.JPG"
                     alt="サウナ"
+                    loading="lazy"
                   />
                   <p class="item-title">サウナ</p>
                 </div>
-                <div
-                  class="item"
-                  data-id="9"
-                  data-description="洗濯機7台と乾燥機6台が設置してあります。洗濯は200円、乾燥は10分につき100円です。洗剤や漂白剤などの販売機も設置しております。"
-                >
+                <div class="item" data-id="14" data-description="">
                   <img
                     class="item-img"
                     src="images/sample-image1.JPG"
-                    alt="コインランドリー"
+                    alt="マッサージ機"
+                    loading="lazy"
                   />
-                  <p class="item-title">コインランドリー</p>
+                  <p class="item-title">マッサージ機</p>
                 </div>
-              </div>
-            </div>
-            <!-- facility: popup -->
-            <div id="popup" class="popup">
-              <div class="popup-content">
-                <span class="close">×</span>
-                <div class="popup-img">
-                  <img id="popup-img" src="" alt="Popup Image" />
-                  <div class="popup-description">
-                    <p id="popup-title"></p>
-                    <p id="popup-text" class="popup-text"></p>
-                  </div>
+                <div class="item" data-id="15" data-description="">
+                  <img
+                    class="item-img"
+                    src="images/sample-image1.JPG"
+                    alt="休憩所/マッサージ機"
+                    loading="lazy"
+                  />
+                  <p class="item-title">休憩所/マッサージ機</p>
                 </div>
               </div>
             </div>
           </div>
           <!-- よくあるご質問 -->
-          <div class="faq" id="faq">
+          <div class="faq scroll-animation scroll-section" id="faq">
             <div class="ttl">
               <div class="content_title_en">
                 <p>FAQ</p>
@@ -295,7 +521,7 @@
             </ul>
           </div>
           <!-- access -->
-          <div class="access" id="access">
+          <div class="access scroll-animation scroll-section" id="access">
             <div class="ttl">
               <div class="content_title_en">
                 <p>Access</p>
@@ -312,6 +538,19 @@
               店舗へのお問い合わせはこちらまで（忘れ物など）：
               <a href="tel:+0426422825" class="tel">042-642-2825</a>　
             </p>
+          </div>
+        </div>
+        <!-- facility: popup -->
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <span class="close">×</span>
+            <div class="popup-img">
+              <img id="popup-img" src="" alt="Popup Image" />
+              <div class="popup-description">
+                <p id="popup-title"></p>
+                <p id="popup-text" class="popup-text"></p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="map map--gray">
