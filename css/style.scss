@@ -47,7 +47,8 @@ li {
         &_text {
           width: 85px;
           height: 31.59px;
-          margin-bottom: 5px;
+          margin-bottom: 6px;
+          margin-left: 4px;
         }
       }
     }
@@ -121,9 +122,9 @@ li {
       // margin-bottom: 80px;
       // background-color: #f9f9f9;
       & img {
-        margin-top: 93px;
+        margin-top: 72px;
         width: 100%;
-        height: calc(100vh - 93px);
+        height: calc(100vh - 72px);
         object-fit: cover;
         object-position: bottom;
         display: block;
@@ -487,16 +488,42 @@ nav {
     }
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   #header {
     & .header {
-      &_logo {
-        &_images_text {
-          display: none;
-        }
+      &_nav {
+        display: none;
       }
     }
   }
+  .hamburger {
+    position: fixed;
+    display: flex;
+    top: 41px;
+    right: 25px;
+    z-index: 1001;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 23px;
+    background-color: #005344;
+    position: absolute;
+    top: 73px;
+    right: 20px;
+    width: 200px;
+    padding: 17px;
+    border-radius: 5px;
+    z-index: 2000;
+  }
+
+  .menu.active {
+    display: flex;
+    position: fixed;
+  }
+}
+@media screen and (max-width: 700px) {
   #wrapper {
     & .content {
       &_padding {
@@ -521,37 +548,6 @@ nav {
   }
 }
 @media screen and (max-width: 600px) {
-  #header {
-    & .header_nav {
-      display: none;
-    }
-  }
-  .hamburger {
-    position: fixed;
-    display: flex;
-    top: 39px;
-    right: 25px;
-    z-index: 1001;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    gap: 23px;
-    background-color: #005344;
-    position: absolute;
-    top: 73px;
-    right: 20px;
-    width: 200px;
-    padding: 17px;
-    border-radius: 5px;
-    z-index: 2000;
-  }
-
-  .menu.active {
-    display: flex;
-    position: fixed;
-  }
   #wrapper {
     & .content {
       & .popup-content {
@@ -562,6 +558,9 @@ nav {
 }
 
 @media screen and (max-width: 500px) {
+  #header {
+    // padding: 20px;
+  }
   #wrapper {
     & .content {
       & .popup-content {
