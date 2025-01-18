@@ -183,6 +183,8 @@ li {
 }
 #wrapper .content .info_wrapper_item_content_sauna {
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 #wrapper .content .facility .f-switch {
   text-align: start;
