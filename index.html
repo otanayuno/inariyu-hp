@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Inariyu</title>
   </head>
   <body>
+    <button id="scrollToTop" class="scroll-top-btn">↑</button>
     <header>
       <div id="header">
         <div class="header">
@@ -17,13 +24,11 @@
                   src="images/inariyu-logo.jpg"
                   alt="稲荷湯"
                   class="header_logo_images_logo"
-                  loading="lazy"
                 />
                 <img
                   src="images/inariyu-text.jpg"
                   alt="稲荷湯"
                   class="header_logo_images_text"
-                  loading="lazy"
                 />
               </a>
             </div>
@@ -136,7 +141,7 @@
                     <span class="info_wrapper_item_content_txt_S"></span>
                   </p>
                   <p class="info_wrapper_item_content_txt_M">
-                    最終受付23:00<br />定休日•••水曜
+                    最終受付23:00<br />水曜定休
                   </p>
                   <p class="info_wrapper_item_content_txt_S">
                     ※祝日の場合は翌休
@@ -254,12 +259,12 @@
                 <div class="info_wrapper_item_ttl">その他設備</div>
                 <div class="info_wrapper_item_content">
                   <p class="info_wrapper_item_content_txt_M">
-                    ・ドライヤー30円（5分）、10円（1分30秒）
+                    ドライヤー30円（5分）、10円（1分30秒）
                   </p>
                   <p class="info_wrapper_item_content_txt_M">
-                    ・コインランドリー
+                    コインランドリー
                   </p>
-                  <p class="info_wrapper_item_content_txt_M">・マッサージ機</p>
+                  <p class="info_wrapper_item_content_txt_M">マッサージ機</p>
                 </div>
               </div>
               <div class="info_wrapper_item">
@@ -299,7 +304,6 @@
                     class="item-img"
                     src="images/entrance.jpg"
                     alt="玄関/靴箱"
-                    loading="lazy"
                   />
                   <p class="item-title">玄関/靴箱</p>
                 </div>
@@ -308,12 +312,7 @@
                   data-id="2"
                   data-description="こちらの券売機で入浴券をご購入いただけます。電子マネーやクレジットカードでのお支払いをご希望の場合は、フロントスタッフにお声がけください。"
                 >
-                  <img
-                    class="item-img"
-                    src="images/ticket.jpg"
-                    alt="券売機"
-                    loading="lazy"
-                  />
+                  <img class="item-img" src="images/ticket.jpg" alt="券売機" />
                   <p class="item-title">券売機</p>
                 </div>
                 <div
@@ -321,12 +320,7 @@
                   data-id="3"
                   data-description="フロントで入浴券と靴箱の鍵をスタッフにお渡しください。大きなお荷物などはフロントでお預かりいたします。気になる点やご要望がございましたら、どうぞお気軽にフロントスタッフにお声がけください！"
                 >
-                  <img
-                    class="item-img"
-                    src="images/front.jpg"
-                    alt="フロント"
-                    loading="lazy"
-                  />
+                  <img class="item-img" src="images/front.jpg" alt="フロント" />
                   <p class="item-title">フロント</p>
                 </div>
                 <div
@@ -338,7 +332,6 @@
                     class="item-img"
                     src="images/kyuukeijo.jpg"
                     alt="休憩所"
-                    loading="lazy"
                   />
                   <p class="item-title">休憩所</p>
                 </div>
@@ -351,7 +344,6 @@
                     class="item-img"
                     src="images/datsuijo-1.jpg"
                     alt="脱衣所"
-                    loading="lazy"
                   />
                   <p class="item-title">脱衣所</p>
                 </div>
@@ -360,12 +352,7 @@
                   data-id="6"
                   data-description="こちらは大浴場です。ジャグジーや日替わり薬湯もご用意しております。リンスインシャンプー、ボディソープも自由にお使いください。スタッフが定期的に見回りを行い、お客様が快適にご利用いただけるよう努めています。"
                 >
-                  <img
-                    class="item-img"
-                    src="images/bath-1.jpg"
-                    alt="浴場"
-                    loading="lazy"
-                  />
+                  <img class="item-img" src="images/bath-1.jpg" alt="浴場" />
                   <p class="item-title">大浴場</p>
                 </div>
                 <div
@@ -377,7 +364,6 @@
                     class="item-img"
                     src="images/roten-1.jpg"
                     alt="露天風呂"
-                    loading="lazy"
                   />
                   <p class="item-title">露天風呂</p>
                 </div>
@@ -386,12 +372,7 @@
                   data-id="8"
                   data-description="サウナの温度は約90度、水風呂は約15度に設定されています。遠赤外線式のガスストーブを設置しており、効率的に温まっていただけます。"
                 >
-                  <img
-                    class="item-img"
-                    src="images/sauna-1.jpg"
-                    alt="サウナ"
-                    loading="lazy"
-                  />
+                  <img class="item-img" src="images/sauna-1.jpg" alt="サウナ" />
                   <p class="item-title">サウナ</p>
                 </div>
                 <div
@@ -403,7 +384,6 @@
                     class="item-img"
                     src="images/coinlaundry.jpg"
                     alt="コインランドリー"
-                    loading="lazy"
                   />
                   <p class="item-title">コインランドリー</p>
                 </div>
@@ -423,7 +403,6 @@
                     class="item-img"
                     src="images/datsuijo-2.jpg"
                     alt="脱衣所"
-                    loading="lazy"
                   />
                   <p class="item-title">脱衣所</p>
                 </div>
@@ -432,12 +411,7 @@
                   data-id="11"
                   data-description="こちらは大浴場です。通常のお湯に加え、ジャグジーや日替わりの薬湯をご用意しております。リンスインシャンプーとボディソープも設置しておりますので、ご自由にお使いください。浴場内は定期的にスタッフが見回りを行い、お客様が安心して快適にご利用いただけるよう努めています。"
                 >
-                  <img
-                    class="item-img"
-                    src="images/bath-2.jpg"
-                    alt="浴場"
-                    loading="lazy"
-                  />
+                  <img class="item-img" src="images/bath-2.jpg" alt="浴場" />
                   <p class="item-title">浴場</p>
                 </div>
                 <div
@@ -457,12 +431,7 @@
                   data-id="13"
                   data-description="サウナの温度は約90度、水風呂は約15度に設定されています。数分に一度のオートロウリュが付いています。"
                 >
-                  <img
-                    class="item-img"
-                    src="images/sauna-2.jpg"
-                    alt="サウナ"
-                    loading="lazy"
-                  />
+                  <img class="item-img" src="images/sauna-2.jpg" alt="サウナ" />
                   <p class="item-title">サウナ</p>
                 </div>
                 <div class="item" data-id="15" data-description="">
@@ -470,7 +439,6 @@
                     class="item-img"
                     src="images/massage-1.JPG"
                     alt="休憩所/マッサージ機"
-                    loading="lazy"
                   />
                   <p class="item-title">休憩所/マッサージ機</p>
                 </div>

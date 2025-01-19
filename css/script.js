@@ -14,6 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 右下アイコンページを一番上にスクロール
+  const scrollToTopButton = document.getElementById('scrollToTop');
+
+  scrollToTopButton.onclick = function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   // popup時
   // facilityの画像クリック時
   const items = document.querySelectorAll('.item');
