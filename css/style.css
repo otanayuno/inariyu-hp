@@ -521,4 +521,12 @@ nav {
   #wrapper .content .popup-content {
     height: 50%;
   }
+}
+@media screen and (max-width: 450px) {
+  #wrapper .content .popup-content {
+    height: 50%;
+  }
+  #wrapper .content .info_wrapper_item_content_sauna {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */

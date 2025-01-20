@@ -137,13 +137,6 @@ li {
       }
     }
     & .fv {
-      // margin-top: 72px;
-      // width: 100%;
-      // height: calc(100vh - 72px);
-      // object-fit: cover;
-      // object-position: bottom;
-      // display: block;
-      // margin-bottom: -48px;
       & img {
         margin-top: 72px;
         width: 100%;
@@ -167,7 +160,6 @@ li {
       &_en {
         margin-top: 120px;
         font-size: 14px;
-        // font-weight: 700;
         margin-bottom: -5px;
       }
     }
@@ -590,13 +582,22 @@ nav {
 }
 
 @media screen and (max-width: 500px) {
-  #header {
-    // padding: 20px;
-  }
   #wrapper {
     & .content {
       & .popup-content {
         height: 50%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  #wrapper {
+    & .content {
+      & .popup-content {
+        height: 50%;
+      }
+      & .info_wrapper_item_content_sauna {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   }
